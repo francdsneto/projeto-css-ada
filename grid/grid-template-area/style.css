@@ -1,0 +1,53 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #222;
+}
+
+main {
+    min-width: 80rem;
+    grid-area: main;
+    background-color: #ddd;
+}
+
+aside {
+    min-width: 60rem;
+    grid-area: aside;
+    background-color: #bbb;
+}
+
+footer {
+    grid-area: footer;
+    background-color: indigo;
+}
+
+.page-grid-container {
+
+    height: 100vh;
+    display: grid;
+    /* gap: 1rem 1rem; */
+
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav"
+    ". . . . . . . ."
+    ". main main main . aside aside ."
+    ". main main main . aside aside ."
+    ". main main main . aside aside ."
+    ". main main main . aside aside ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    "footer footer footer footer footer footer footer footer"
+    ;
+
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr 3fr 3fr 1fr;
+    grid-template-rows: 3fr 1fr 4fr 4fr 4fr 4fr 1fr 1fr 2fr;
+    
+}
