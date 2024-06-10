@@ -1,0 +1,167 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 2rem;    
+}
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+    color: blueviolet;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* opacity: 0%; */
+}
+
+p {
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+section.img-background {
+    height: 30vh;
+    width: 100vw;
+    background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+section.container {
+    padding: 2rem;
+}
+
+[data-button-products] {
+    padding: 0.4rem 2rem;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+    display: none;;
+}
+
+a {
+    padding: 0.4rem 2rem;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 50%;
+    display: block;    
+    margin: auto;
+    text-align: center;
+    transition: all .2s ease-in-out, background-color .5s ease-in-out;
+}
+
+[data-anchor="produtos"] {
+    /* padding: 0.4rem 2rem;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 50%;
+    display: block;    
+    margin: auto;
+    text-align: center;
+    transition: all .2s ease-in-out, background-color .5s ease-in-out; */
+}
+
+[data-anchor="produtos"]:hover {
+    transform: scale(1.2);
+    color: #eee;
+    background-color: blueviolet;
+}
+
+[data-anchor="team"] {
+    margin-top: 2rem;
+    animation: pulse 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: .8;
+    }
+    100% {
+        transform: scale(1.);
+        opacity: 1;
+    }
+}
+
+.spinner-container {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-spinner {
+    margin: 4rem;
+    font-size: 4rem;
+    color: blueviolet;
+    animation: girar 4s infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+section.container table, th, td {
+    border: 1px solid #000;
+}
+
+#company-table {
+    width: 100%;
+}
+
+table thead tr:first-child {
+    background-color: cornflowerblue;
+    color: #fff
+}
+
+table tr:nth-child(2n+ 2) {
+    background-color: #CCC;
+}
+
+[data-company="GCO"] {
+    background-color: aquamarine;
+}
+
+[data-company] {
+    color: #111
+}
+
+@media screen and (max-width : 500px) {
+    section.img-background {
+        display: none;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width: 1024px) {
+    section.img-background {
+        height: 40vh;
+    }    
+}
